@@ -3,6 +3,6 @@ server:
 spring:
   application:
     name: client
-  thymelead:
+  thymeleaf:
     prefix: classpath:/static/
     suffix: .html
