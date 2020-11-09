@@ -3,10 +3,7 @@ package com.lumosss.entity;
 import lombok.Data;
 
 @Data
-public class Menu {
+public class Type {
     private long id;
     private String name;
-    private double price;
-    private String flavor;
-    private Type type;
 }
