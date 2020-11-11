@@ -1,2 +1,13 @@
 server:
   port: 8010
+spring:
+  application:
+    name: order
+  datasource:
+    name: takeawayOrdering
+    url: jdbc:mysql://18.222.190.64:3306/takeawayOrdering2
+    username: root
+    password: root
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.lumosss.entity
