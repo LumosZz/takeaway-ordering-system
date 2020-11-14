@@ -32,7 +32,7 @@ public class ClientMenuHandler {
     @GetMapping("/deleteById/{id}")
     public String deleteById(@PathVariable("id") long id) {
         menuFeign.deleteById(id);
-        return "redirect:/clientmenu/redirect/index";
+        return "redirect:/clientmenu/redirect/menu_manage";
     }
 
     @GetMapping("/findTypes")
@@ -46,7 +46,7 @@ public class ClientMenuHandler {
     @PostMapping("/save")
     public String save(Menu menu) {
         menuFeign.save(menu);
-        return "redirect:/clientmenu/redirect/index";
+        return "redirect:/clientmenu/redirect/menu_manage";
     }
 
     @GetMapping("findById/{id}")
@@ -61,6 +61,6 @@ public class ClientMenuHandler {
     @PostMapping("/update")
     public String update(Menu menu) {
         menuFeign.update(menu);
-        return "redirect:/clientmenu/redirect/index";
+        return "redirect:/clientmenu/redirect/menu_manage";
     }
 }
