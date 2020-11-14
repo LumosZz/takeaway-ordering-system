@@ -1,12 +1,21 @@
 server:
-  port: 8762
+  port: 8888
 spring:
   application:
     name: configserver
-  profiles:
-    active: native
   cloud:
+    bus:
+      trace:
+        enable: true
     config:
       server:
-        native:
-          search-locations: classpath:/shared
+        git:
+          uri: https://github.com/LumosZz/takeaway-ordering-system.git #git仓库地址
+          searchPaths: config #仓库路径
+          username: actyzhang@outlook.com #git仓库用户名
+          password: Phzty9228115 #git仓库密码
+      label: master #仓库的分支
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
